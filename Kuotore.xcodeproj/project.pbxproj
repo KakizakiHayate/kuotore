@@ -59,11 +59,11 @@
 			children = (
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
-				75F351402B04A933006EACD5 /* Assets.xcassets */,
-				75F351422B04A933006EACD5 /* Preview Content */,
 				755D302D2B0F8BC300EE834F /* CentralViewModel.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
 				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
+				75F351402B04A933006EACD5 /* Assets.xcassets */,
+				75F351422B04A933006EACD5 /* Preview Content */,
 			);
 			path = Kuotore;
 			sourceTree = "<group>";
