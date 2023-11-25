@@ -14,6 +14,7 @@
 		75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513E2B04A930006EACD5 /* ContentView.swift */; };
 		75F351412B04A933006EACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351402B04A933006EACD5 /* Assets.xcassets */; };
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
+		BD0A8EA82B11E34200C1E112 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A8EA72B11E34200C1E112 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		75F3513E2B04A930006EACD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD0A8EA72B11E34200C1E112 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 		75F3513B2B04A930006EACD5 /* Kuotore */ = {
 			isa = PBXGroup;
 			children = (
-				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewModel.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
 				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
-				75F351402B04A933006EACD5 /* Assets.xcassets */,
+				BD0A8EA92B11E39200C1E112 /* App */,
+				BD0A8EAC2B11E42C00C1E112 /* Views */,
+				BD0A8EAB2B11E3FB00C1E112 /* Resources */,
 				75F351422B04A933006EACD5 /* Preview Content */,
 			);
 			path = Kuotore;
@@ -74,6 +77,38 @@
 				75F351432B04A933006EACD5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD0A8EA92B11E39200C1E112 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD0A8EAA2B11E3F200C1E112 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BD0A8EAB2B11E3FB00C1E112 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A8EAA2B11E3F200C1E112 /* Fonts */,
+				75F351402B04A933006EACD5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD0A8EAC2B11E42C00C1E112 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD0A8EA72B11E34200C1E112 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
+				BD0A8EA82B11E34200C1E112 /* HomeView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
 				75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */,
 			);
