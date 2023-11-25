@@ -18,7 +18,7 @@ class CentralViewModel: NSObject, ObservableObject {
     var writeIterationsComplete = 0
     var connectionIterationsComplete = 0
     let defaultIterations = 5
-    var data: Data = Data()
+    var data = Data()
 
 
     override init() {
@@ -30,28 +30,31 @@ class CentralViewModel: NSObject, ObservableObject {
         centralManager.stopScan()
     }
 
+    /// Bluetoothデバイスとの通信が不要になったときに呼ぶ
     private func cleanup() {
-        guard let discoveredPeripheral = discoveredPeripheral,
-              case .connected = discoveredPeripheral.state else { return }
+        guard let discoveredPeripheral = discoveredPeripheral else { return }
+        guard case .connected = discoveredPeripheral.state else { return }
 
-        for service in (discoveredPeripheral.services ?? [] as [CBService]) {
-            for characteristic in (service.characteristics ?? [] as [CBCharacteristic]) {
-                if characteristic.uuid == TransferService.characteristicUUID && characteristic.isNotifying {
-                    self.discoveredPeripheral?.setNotifyValue(false, for: characteristic)
-                }
+        guard let service = discoveredPeripheral.services else { return }
+        let characteristics = service.compactMap { $0.characteristics }
+                                     .flatMap { $0 }
+        characteristics.forEach {
+            if $0.uuid == TransferService.characteristicUUID && $0.isNotifying {
+                self.discoveredPeripheral?.setNotifyValue(false, for: $0)
+                os_log("ペリフェラルからの通知をオフにしました")
             }
         }
 
         centralManager.cancelPeripheralConnection(discoveredPeripheral)
+        os_log("ペリフェラルとの接続を解除しました")
     }
 
     private func writeData() {
-        guard let discoveredPeripheral = discoveredPeripheral, let transferCharacteristic = transferCharacteristic
-        else {
-            return
-        }
+        guard let discoveredPeripheral = discoveredPeripheral else { return }
+        guard let transferCharacteristic = transferCharacteristic else { return }
 
-        while writeIterationsComplete < defaultIterations && discoveredPeripheral.canSendWriteWithoutResponse {
+        while writeIterationsComplete < defaultIterations
+                && discoveredPeripheral.canSendWriteWithoutResponse {
             writeIterationsComplete += 1
         }
 
