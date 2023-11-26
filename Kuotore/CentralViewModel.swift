@@ -9,7 +9,7 @@ import Foundation
 import CoreBluetooth
 import os
 
-final class CentralViewModel: NSObject, ObservableObject {
+final class CentralViewManager: NSObject, ObservableObject {
 
     @Published var message = ""
     // MARK: - Properties
@@ -30,7 +30,8 @@ final class CentralViewModel: NSObject, ObservableObject {
 }
 
 // MARK: - CentralViewModel
-extension CentralViewModel {
+extension CentralViewManager {
+    // MARK: - Methods
     func stopAction() {
         centralManager?.stopScan()
     }
@@ -85,8 +86,8 @@ extension CentralViewModel {
 }
 
 // MARK: - CentralViewModel: CBCentralManagerDelegate
-extension CentralViewModel: CBCentralManagerDelegate {
-
+extension CentralViewManager: CBCentralManagerDelegate {
+    // MARK: - Methods
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
@@ -171,8 +172,8 @@ extension CentralViewModel: CBCentralManagerDelegate {
 }
 
 // MARK: - CBCentralManagerDelegate: CBPeripheralDelegate
-extension CentralViewModel: CBPeripheralDelegate {
-
+extension CentralViewManager: CBPeripheralDelegate {
+    // MARK: - Methods
     /// Characteristicを検索
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if error != nil {
