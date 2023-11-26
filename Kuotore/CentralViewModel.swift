@@ -20,9 +20,8 @@ final class CentralViewModel: NSObject, ObservableObject {
     var connectionIterationsComplete = 0
     let defaultIterations = 5
     var data = Data()
-    static let shared = CentralViewModel()
 
-    private override init() {
+    override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self,
                                           queue: nil,
