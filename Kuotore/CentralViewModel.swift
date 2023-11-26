@@ -9,10 +9,9 @@ import Foundation
 import CoreBluetooth
 import os
 
-final class CentralViewManager: NSObject, ObservableObject {
+final class CentralViewModel: NSObject, ObservableObject {
 
     @Published var message = ""
-    // MARK: - Properties
     var centralManager: CBCentralManager?
     var discoveredPeripheral: CBPeripheral?
     var transferCharacteristic: CBCharacteristic?
@@ -20,6 +19,7 @@ final class CentralViewManager: NSObject, ObservableObject {
     var connectionIterationsComplete = 0
     let defaultIterations = 5
     var data = Data()
+
 
     override init() {
         super.init()
@@ -30,8 +30,7 @@ final class CentralViewManager: NSObject, ObservableObject {
 }
 
 // MARK: - CentralViewModel
-extension CentralViewManager {
-    // MARK: - Methods
+extension CentralViewModel {
     func stopAction() {
         centralManager?.stopScan()
     }
@@ -86,8 +85,8 @@ extension CentralViewManager {
 }
 
 // MARK: - CentralViewModel: CBCentralManagerDelegate
-extension CentralViewManager: CBCentralManagerDelegate {
-    // MARK: - Methods
+extension CentralViewModel: CBCentralManagerDelegate {
+
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
@@ -172,8 +171,8 @@ extension CentralViewManager: CBCentralManagerDelegate {
 }
 
 // MARK: - CBCentralManagerDelegate: CBPeripheralDelegate
-extension CentralViewManager: CBPeripheralDelegate {
-    // MARK: - Methods
+extension CentralViewModel: CBPeripheralDelegate {
+
     /// Characteristicを検索
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         if error != nil {
