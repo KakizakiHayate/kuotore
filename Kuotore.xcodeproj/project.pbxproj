@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D302D2B0F8BC300EE834F /* CentralViewModel.swift */; };
+		755D302E2B0F8BC300EE834F /* CentralViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D302D2B0F8BC300EE834F /* CentralViewManager.swift */; };
 		755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */; };
 		755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D30312B0F8E3A00EE834F /* TransferService.swift */; };
 		75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513C2B04A930006EACD5 /* KuotoreApp.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		755D302D2B0F8BC300EE834F /* CentralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewModel.swift; sourceTree = "<group>"; };
+		755D302D2B0F8BC300EE834F /* CentralViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewManager.swift; sourceTree = "<group>"; };
 		755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewModel.swift; sourceTree = "<group>"; };
 		755D30312B0F8E3A00EE834F /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		75F351392B04A930006EACD5 /* Kuotore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuotore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,7 @@
 				BD4EDA652B1367E8003E1A11 /* ViewModels */,
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
-				755D302D2B0F8BC300EE834F /* CentralViewModel.swift */,
+				755D302D2B0F8BC300EE834F /* CentralViewManager.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
 				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
 				75F351402B04A933006EACD5 /* Assets.xcassets */,
@@ -237,7 +237,7 @@
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
-				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
+				755D302E2B0F8BC300EE834F /* CentralViewManager.swift in Sources */,
 				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
 				BD4EDA642B13628E003E1A11 /* RealmManager.swift in Sources */,
 				BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */,
