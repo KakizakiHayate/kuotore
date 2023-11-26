@@ -14,6 +14,8 @@
 		75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513E2B04A930006EACD5 /* ContentView.swift */; };
 		75F351412B04A933006EACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351402B04A933006EACD5 /* Assets.xcassets */; };
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
+		75FC88182B139D22008CD47E /* AddTrainingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC88172B139D22008CD47E /* AddTrainingEvent.swift */; };
+		75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC881B2B139F20008CD47E /* AddTrainingEventViewModel.swift */; };
 		BD4EDA552B131CF2003E1A11 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA542B131CF2003E1A11 /* Realm */; };
 		BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA562B131CF2003E1A11 /* RealmSwift */; };
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
@@ -33,6 +35,8 @@
 		75F3513E2B04A930006EACD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75FC88172B139D22008CD47E /* AddTrainingEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingEvent.swift; sourceTree = "<group>"; };
+		75FC881B2B139F20008CD47E /* AddTrainingEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingEventViewModel.swift; sourceTree = "<group>"; };
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -95,6 +99,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		75FC88192B139D27008CD47E /* AddTrainingEvent */ = {
+			isa = PBXGroup;
+			children = (
+				75FC88172B139D22008CD47E /* AddTrainingEvent.swift */,
+			);
+			path = AddTrainingEvent;
+			sourceTree = "<group>";
+		};
+		75FC881A2B139F03008CD47E /* AddTrainingEvent */ = {
+			isa = PBXGroup;
+			children = (
+				75FC881B2B139F20008CD47E /* AddTrainingEventViewModel.swift */,
+			);
+			path = AddTrainingEvent;
+			sourceTree = "<group>";
+		};
 		BD4EDA582B131D46003E1A11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4EDA612B13617A003E1A11 /* HomeView.swift */,
+				75FC88192B139D27008CD47E /* AddTrainingEvent */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */,
+				75FC881A2B139F03008CD47E /* AddTrainingEvent */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,11 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FC88182B139D22008CD47E /* AddTrainingEvent.swift in Sources */,
 				BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */,
 				BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */,
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
+				75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
 				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
