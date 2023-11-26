@@ -14,6 +14,11 @@
 		75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513E2B04A930006EACD5 /* ContentView.swift */; };
 		75F351412B04A933006EACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351402B04A933006EACD5 /* Assets.xcassets */; };
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
+		BD4EDA552B131CF2003E1A11 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA542B131CF2003E1A11 /* Realm */; };
+		BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA562B131CF2003E1A11 /* RealmSwift */; };
+		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
+		BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */; };
+		BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5E2B132A64003E1A11 /* Training.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,9 @@
 		75F3513E2B04A930006EACD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
+		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */,
+				BD4EDA552B131CF2003E1A11 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +67,7 @@
 		75F3513B2B04A930006EACD5 /* Kuotore */ = {
 			isa = PBXGroup;
 			children = (
+				BD4EDA582B131D46003E1A11 /* Models */,
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewModel.swift */,
@@ -76,6 +87,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BD4EDA582B131D46003E1A11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EDA5D2B131EA6003E1A11 /* RealmObjects */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD4EDA5D2B131EA6003E1A11 /* RealmObjects */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EDA592B131DA1003E1A11 /* UserInfo.swift */,
+				BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */,
+				BD4EDA5E2B132A64003E1A11 /* Training.swift */,
+			);
+			path = RealmObjects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,6 +121,10 @@
 			dependencies = (
 			);
 			name = Kuotore;
+			packageProductDependencies = (
+				BD4EDA542B131CF2003E1A11 /* Realm */,
+				BD4EDA562B131CF2003E1A11 /* RealmSwift */,
+			);
 			productName = Kuotore;
 			productReference = 75F351392B04A930006EACD5 /* Kuotore.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +153,9 @@
 				Base,
 			);
 			mainGroup = 75F351302B04A930006EACD5;
+			packageReferences = (
+				BD4EDA532B131CF2003E1A11 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 75F3513A2B04A930006EACD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
+				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
+				BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */,
 				75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +399,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD4EDA532B131CF2003E1A11 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD4EDA542B131CF2003E1A11 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4EDA532B131CF2003E1A11 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		BD4EDA562B131CF2003E1A11 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4EDA532B131CF2003E1A11 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75F351312B04A930006EACD5 /* Project object */;
 }
