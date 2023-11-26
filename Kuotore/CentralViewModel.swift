@@ -9,9 +9,10 @@ import Foundation
 import CoreBluetooth
 import os
 
-class CentralViewModel: NSObject, ObservableObject {
+final class CentralViewModel: NSObject, ObservableObject {
 
     @Published var message = ""
+    // MARK: - Properties
     var centralManager: CBCentralManager?
     var discoveredPeripheral: CBPeripheral?
     var transferCharacteristic: CBCharacteristic?
@@ -19,9 +20,9 @@ class CentralViewModel: NSObject, ObservableObject {
     var connectionIterationsComplete = 0
     let defaultIterations = 5
     var data = Data()
+    static let shared = CentralViewModel()
 
-
-    override init() {
+    private override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self,
                                           queue: nil,

@@ -33,7 +33,7 @@ struct ContentView: View {
 }
 
 struct CentralView: View {
-    @StateObject var central: CentralViewModel = CentralViewModel()
+    @StateObject var central: CentralViewModel = CentralViewModel.shared
 
     var body: some View {
 
