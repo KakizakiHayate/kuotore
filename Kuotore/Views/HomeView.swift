@@ -22,6 +22,9 @@ struct HomeView: View {
                             Text(trainingInfo.name)
                         }
                     }
+                    NavigationLink(destination: EmptyView()) {
+                        Text("カスタム種目追加")
+                    }
                 }
             }
         }
