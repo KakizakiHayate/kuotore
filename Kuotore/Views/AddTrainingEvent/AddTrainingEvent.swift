@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddTrainingEvent: View {
     // MARK: - Property Wrappers
-    @StateObject private var bluetoothManager = CentralViewModel()
+    @StateObject private var bluetoothManager = CentralViewManager()
     @StateObject private var vm = AddTrainingEventViewModel()
     // MARK: - Body
     var body: some View {
