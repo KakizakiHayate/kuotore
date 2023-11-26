@@ -19,6 +19,9 @@
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
 		BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */; };
 		BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5E2B132A64003E1A11 /* Training.swift */; };
+		BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA612B13617A003E1A11 /* HomeView.swift */; };
+		BD4EDA642B13628E003E1A11 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA632B13628D003E1A11 /* RealmManager.swift */; };
+		BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		BD4EDA612B13617A003E1A11 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BD4EDA632B13628D003E1A11 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				BD4EDA582B131D46003E1A11 /* Models */,
+				BD4EDA602B136168003E1A11 /* Views */,
+				BD4EDA652B1367E8003E1A11 /* ViewModels */,
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewModel.swift */,
@@ -90,6 +98,7 @@
 		BD4EDA582B131D46003E1A11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BD4EDA632B13628D003E1A11 /* RealmManager.swift */,
 				BD4EDA5D2B131EA6003E1A11 /* RealmObjects */,
 			);
 			path = Models;
@@ -103,6 +112,22 @@
 				BD4EDA5E2B132A64003E1A11 /* Training.swift */,
 			);
 			path = RealmObjects;
+			sourceTree = "<group>";
+		};
+		BD4EDA602B136168003E1A11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EDA612B13617A003E1A11 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD4EDA652B1367E8003E1A11 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */,
+				BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */,
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
 				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
+				BD4EDA642B13628E003E1A11 /* RealmManager.swift in Sources */,
 				BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */,
 				75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */,
 			);
