@@ -17,6 +17,7 @@
 		BD4EDA552B131CF2003E1A11 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA542B131CF2003E1A11 /* Realm */; };
 		BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA562B131CF2003E1A11 /* RealmSwift */; };
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
+		BD4EDA5C2B131E9F003E1A11 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5B2B131E9F003E1A11 /* Training.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BD4EDA5B2B131E9F003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +88,18 @@
 		BD4EDA582B131D46003E1A11 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD4EDA592B131DA1003E1A11 /* UserInfo.swift */,
+				BD4EDA5D2B131EA6003E1A11 /* RealmObjects */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BD4EDA5D2B131EA6003E1A11 /* RealmObjects */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EDA592B131DA1003E1A11 /* UserInfo.swift */,
+				BD4EDA5B2B131E9F003E1A11 /* Training.swift */,
+			);
+			path = RealmObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4EDA5C2B131E9F003E1A11 /* Training.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
