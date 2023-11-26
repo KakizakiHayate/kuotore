@@ -204,8 +204,14 @@ extension CentralViewModel: CBPeripheralDelegate {
             return
         }
 
-        guard let characteristicData = characteristic.value,
-            let stringFromData = String(data: characteristicData, encoding: .utf8) else {
+        guard let characteristicData = characteristic.value else { return }
+        guard let json = try? JSONSerialization.jsonObject(with: characteristicData, options: []) as? [String: Int] else {
+            return
+        }
+        print(json["distance"] ?? 0)
+        print(type(of: json["distance"] ?? 0))
+
+        guard let stringFromData = String(data: characteristicData, encoding: .utf8) else {
             return
         }
 
