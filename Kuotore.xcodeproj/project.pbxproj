@@ -18,6 +18,7 @@
 		BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA562B131CF2003E1A11 /* RealmSwift */; };
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
 		BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */; };
+		BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5E2B132A64003E1A11 /* Training.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
+		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				BD4EDA592B131DA1003E1A11 /* UserInfo.swift */,
 				BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */,
+				BD4EDA5E2B132A64003E1A11 /* Training.swift */,
 			);
 			path = RealmObjects;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewModel.swift in Sources */,
+				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
 				BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */,
 				75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */,
 			);

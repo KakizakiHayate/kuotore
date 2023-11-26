@@ -15,7 +15,7 @@ class TrainingInfo: Object {
     
     // 反復する運動 = true, 持続する運動 = false
     @Persisted var isRepetitive = true
-    @Persisted var targetDistance: Float
+    @Persisted var targetDistance: Int
     
     // TODO: - あとでまた追加
     // 反復する運動
