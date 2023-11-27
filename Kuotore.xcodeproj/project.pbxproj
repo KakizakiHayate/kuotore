@@ -85,14 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				BDC9A8842B150A5100723B13 /* Info.plist */,
-				BDC9A8872B150B0100723B13 /* Extensions */,
-				BDC9A8752B1509F800723B13 /* Fonts */,
-				BD4EDA582B131D46003E1A11 /* Models */,
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewManager.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
 				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
+				BD4EDA582B131D46003E1A11 /* Models */,
+				BDC9A8872B150B0100723B13 /* Extensions */,
+				BDC9A8752B1509F800723B13 /* Fonts */,
 				75F351402B04A933006EACD5 /* Assets.xcassets */,
 				75F351422B04A933006EACD5 /* Preview Content */,
 			);
