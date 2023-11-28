@@ -58,12 +58,12 @@ void deinitM5() {
 // distance methods
 void initDistance() {
   Wire.begin(0, 26);
-  sensor.setTimeout(500);
+  sensor.setTimeout(200);
   if (!sensor.init()) {
     Serial.println("Failed to detect and initialize sensor!");
     while (1) {}
   }
-  sensor.startContinuous(500);
+  sensor.startContinuous(200);
 }
 
 uint16_t getDistance() {
