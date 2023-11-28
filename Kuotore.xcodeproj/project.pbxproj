@@ -190,6 +190,8 @@
 				75FC881A2B139F03008CD47E /* AddTrainingEvent */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		BDC9A8752B1509F800723B13 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
