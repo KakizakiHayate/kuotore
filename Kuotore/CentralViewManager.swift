@@ -12,28 +12,35 @@ import os
 final class CentralViewManager: NSObject, ObservableObject {
 
     @Published var message = ""
+    @Published private(set) var distance: Int?
     // MARK: - Properties
     var centralManager: CBCentralManager?
     var discoveredPeripheral: CBPeripheral?
     var transferCharacteristic: CBCharacteristic?
     var writeIterationsComplete = 0
     var connectionIterationsComplete = 0
-    let defaultIterations = 5
     var data = Data()
+    let defaultIterations = 5
+    static let shared = CentralViewManager()
 
-    override init() {
+    // MARK: - Initialize
+    private override init() {
         super.init()
-        centralManager = CBCentralManager(delegate: self,
-                                          queue: nil,
-                                          options: [CBCentralManagerOptionShowPowerAlertKey: true])
     }
 }
 
 // MARK: - CentralViewModel
 extension CentralViewManager {
     // MARK: - Methods
+    func startAction() {
+        centralManager = CBCentralManager(delegate: self,
+                                          queue: nil,
+                                          options: [CBCentralManagerOptionShowPowerAlertKey: true])
+    }
+
     func stopAction() {
         centralManager?.stopScan()
+        centralManager = nil
     }
 
     /// Bluetoothデバイスとの通信が不要になったときに呼ぶ
@@ -228,6 +235,7 @@ extension CentralViewManager: CBPeripheralDelegate {
             }
             print(json["distance"] ?? 0)
             print(type(of: json["distance"] ?? 0)) // ここでInt型の距離を表示している
+            distance = json["distance"]
 
             guard let stringFromData = String(data: characteristicData, encoding: .utf8) else {
                 return
