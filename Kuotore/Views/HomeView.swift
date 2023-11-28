@@ -13,18 +13,32 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                if homeVM.trainingInfos.isEmpty {
-                    Text("保存されている種目なし")
-                } else {
-                    ForEach(homeVM.trainingInfos, id: \.self) { trainingInfo in
-                        NavigationLink(destination: EmptyView()) {
-                            Text(trainingInfo.name)
+            GeometryReader { proxy in
+                ZStack {
+                    Color.black.ignoresSafeArea()
+                    VStack {
+                        HStack {
+                            HStack {
+                                Image("logo-primary")
+                                    .resizable()
+                                    .frame(width: proxy.size.width / 12)
+                                    .frame(height: proxy.size.width / 12)
+                                Text("クオトレ")
+                                    .font(.custom(Font.appBlack, size: 24))
+                                    .foregroundStyle(Color.appPrimary)
+                            }
+                            Spacer()
+                            NavigationLink(destination: EmptyView()) {
+                                Image(systemName: "gearshape")
+                                    .resizable()
+                                    .frame(width: proxy.size.width / 16)
+                                    .frame(height: proxy.size.width / 16)
+                                    .foregroundStyle(.appPrimary)
+                            }
                         }
+                        Spacer()
                     }
-                    NavigationLink(destination: EmptyView()) {
-                        Text("カスタム種目追加")
-                    }
+                    .padding()
                 }
             }
         }
