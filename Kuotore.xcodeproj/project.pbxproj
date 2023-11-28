@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		755D302E2B0F8BC300EE834F /* CentralViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D302D2B0F8BC300EE834F /* CentralViewManager.swift */; };
-		755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */; };
 		755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D30312B0F8E3A00EE834F /* TransferService.swift */; };
 		7590D3FC2B162EF200328956 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590D3FB2B162EF200328956 /* Extension+View.swift */; };
 		75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513C2B04A930006EACD5 /* KuotoreApp.swift */; };
-		75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513E2B04A930006EACD5 /* ContentView.swift */; };
 		75F351412B04A933006EACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351402B04A933006EACD5 /* Assets.xcassets */; };
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
 		75FC88182B139D22008CD47E /* AddTrainingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC88172B139D22008CD47E /* AddTrainingEventView.swift */; };
@@ -37,12 +35,10 @@
 
 /* Begin PBXFileReference section */
 		755D302D2B0F8BC300EE834F /* CentralViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewManager.swift; sourceTree = "<group>"; };
-		755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewModel.swift; sourceTree = "<group>"; };
 		755D30312B0F8E3A00EE834F /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		7590D3FB2B162EF200328956 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		75F351392B04A930006EACD5 /* Kuotore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuotore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3513C2B04A930006EACD5 /* KuotoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuotoreApp.swift; sourceTree = "<group>"; };
-		75F3513E2B04A930006EACD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75FC88172B139D22008CD47E /* AddTrainingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingEventView.swift; sourceTree = "<group>"; };
@@ -114,14 +110,11 @@
 			children = (
 				759B17622B13A2D6006B7645 /* Application */,
 				7590D3FD2B163E2600328956 /* Extensions */,
-				BD4EDA582B131D46003E1A11 /* Models */,
 				BD4EDA602B136168003E1A11 /* Views */,
 				BD4EDA652B1367E8003E1A11 /* ViewModels */,
 				BDC9A8842B150A5100723B13 /* Info.plist */,
-				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewManager.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
-				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
 				BD4EDA582B131D46003E1A11 /* Models */,
 				BDC9A8872B150B0100723B13 /* Extensions */,
 				BDC9A8752B1509F800723B13 /* Fonts */,
@@ -304,9 +297,7 @@
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				BDC9A8892B150B2000723B13 /* Font+AppFonts.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
-				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */,
-				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewManager.swift in Sources */,
 				BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */,
 				7590D3FC2B162EF200328956 /* Extension+View.swift in Sources */,
