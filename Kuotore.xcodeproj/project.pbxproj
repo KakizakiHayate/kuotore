@@ -95,8 +95,8 @@
 		75F3513B2B04A930006EACD5 /* Kuotore */ = {
 			isa = PBXGroup;
 			children = (
-				7590D3FD2B163E2600328956 /* Extensions */,
 				759B17622B13A2D6006B7645 /* Application */,
+				7590D3FD2B163E2600328956 /* Extensions */,
 				BD4EDA582B131D46003E1A11 /* Models */,
 				BD4EDA602B136168003E1A11 /* Views */,
 				BD4EDA652B1367E8003E1A11 /* ViewModels */,
