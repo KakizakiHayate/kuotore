@@ -19,6 +19,14 @@
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
 		BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */; };
 		BD4EDA5F2B132A64003E1A11 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA5E2B132A64003E1A11 /* Training.swift */; };
+		BDC9A87D2B150A2500723B13 /* MPLUS1p-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8762B150A2500723B13 /* MPLUS1p-ExtraBold.ttf */; };
+		BDC9A87E2B150A2500723B13 /* MPLUS1p-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8772B150A2500723B13 /* MPLUS1p-Black.ttf */; };
+		BDC9A87F2B150A2500723B13 /* MPLUS1p-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8782B150A2500723B13 /* MPLUS1p-Light.ttf */; };
+		BDC9A8802B150A2500723B13 /* MPLUS1p-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8792B150A2500723B13 /* MPLUS1p-Thin.ttf */; };
+		BDC9A8812B150A2500723B13 /* MPLUS1p-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A87A2B150A2500723B13 /* MPLUS1p-Bold.ttf */; };
+		BDC9A8822B150A2500723B13 /* MPLUS1p-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A87B2B150A2500723B13 /* MPLUS1p-Medium.ttf */; };
+		BDC9A8832B150A2500723B13 /* MPLUS1p-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A87C2B150A2500723B13 /* MPLUS1p-Regular.ttf */; };
+		BDC9A8892B150B2000723B13 /* Font+AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC9A8882B150B2000723B13 /* Font+AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +41,15 @@
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		BDC9A8762B150A2500723B13 /* MPLUS1p-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-ExtraBold.ttf"; sourceTree = "<group>"; };
+		BDC9A8772B150A2500723B13 /* MPLUS1p-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Black.ttf"; sourceTree = "<group>"; };
+		BDC9A8782B150A2500723B13 /* MPLUS1p-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Light.ttf"; sourceTree = "<group>"; };
+		BDC9A8792B150A2500723B13 /* MPLUS1p-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Thin.ttf"; sourceTree = "<group>"; };
+		BDC9A87A2B150A2500723B13 /* MPLUS1p-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Bold.ttf"; sourceTree = "<group>"; };
+		BDC9A87B2B150A2500723B13 /* MPLUS1p-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Medium.ttf"; sourceTree = "<group>"; };
+		BDC9A87C2B150A2500723B13 /* MPLUS1p-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Regular.ttf"; sourceTree = "<group>"; };
+		BDC9A8842B150A5100723B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BDC9A8882B150B2000723B13 /* Font+AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+AppFonts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +84,15 @@
 		75F3513B2B04A930006EACD5 /* Kuotore */ = {
 			isa = PBXGroup;
 			children = (
-				BD4EDA582B131D46003E1A11 /* Models */,
+				BDC9A8842B150A5100723B13 /* Info.plist */,
 				75F3513C2B04A930006EACD5 /* KuotoreApp.swift */,
 				75F3513E2B04A930006EACD5 /* ContentView.swift */,
 				755D302D2B0F8BC300EE834F /* CentralViewManager.swift */,
 				755D30312B0F8E3A00EE834F /* TransferService.swift */,
 				755D302F2B0F8C6500EE834F /* PeripheralViewModel.swift */,
+				BD4EDA582B131D46003E1A11 /* Models */,
+				BDC9A8872B150B0100723B13 /* Extensions */,
+				BDC9A8752B1509F800723B13 /* Fonts */,
 				75F351402B04A933006EACD5 /* Assets.xcassets */,
 				75F351422B04A933006EACD5 /* Preview Content */,
 			);
@@ -103,6 +123,28 @@
 				BD4EDA5E2B132A64003E1A11 /* Training.swift */,
 			);
 			path = RealmObjects;
+			sourceTree = "<group>";
+		};
+		BDC9A8752B1509F800723B13 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDC9A8772B150A2500723B13 /* MPLUS1p-Black.ttf */,
+				BDC9A87A2B150A2500723B13 /* MPLUS1p-Bold.ttf */,
+				BDC9A8762B150A2500723B13 /* MPLUS1p-ExtraBold.ttf */,
+				BDC9A8782B150A2500723B13 /* MPLUS1p-Light.ttf */,
+				BDC9A87B2B150A2500723B13 /* MPLUS1p-Medium.ttf */,
+				BDC9A87C2B150A2500723B13 /* MPLUS1p-Regular.ttf */,
+				BDC9A8792B150A2500723B13 /* MPLUS1p-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDC9A8872B150B0100723B13 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDC9A8882B150B2000723B13 /* Font+AppFonts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +212,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC9A8802B150A2500723B13 /* MPLUS1p-Thin.ttf in Resources */,
 				75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */,
+				BDC9A87F2B150A2500723B13 /* MPLUS1p-Light.ttf in Resources */,
+				BDC9A8812B150A2500723B13 /* MPLUS1p-Bold.ttf in Resources */,
+				BDC9A87E2B150A2500723B13 /* MPLUS1p-Black.ttf in Resources */,
+				BDC9A87D2B150A2500723B13 /* MPLUS1p-ExtraBold.ttf in Resources */,
+				BDC9A8822B150A2500723B13 /* MPLUS1p-Medium.ttf in Resources */,
 				75F351412B04A933006EACD5 /* Assets.xcassets in Resources */,
+				BDC9A8832B150A2500723B13 /* MPLUS1p-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
+				BDC9A8892B150B2000723B13 /* Font+AppFonts.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
 				755D30302B0F8C6500EE834F /* PeripheralViewModel.swift in Sources */,
 				75F3513F2B04A930006EACD5 /* ContentView.swift in Sources */,
@@ -326,6 +376,7 @@
 				DEVELOPMENT_TEAM = N28L9FHHL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kuotore/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "他デバイスとのメッセージでBluetoothを使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -357,6 +408,7 @@
 				DEVELOPMENT_TEAM = N28L9FHHL4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kuotore/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "他デバイスとのメッセージでBluetoothを使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
