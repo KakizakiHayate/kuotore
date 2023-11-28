@@ -12,11 +12,11 @@ class AddTrainingEventViewModel: ObservableObject {
     // MARK: - Property Wrappers
     @Published var name = ""
     @Published var distances = [Int]()
+    @Published var preparationTime = 5
+    @Published var distanceTime = 3
     // MARK: - Properties
     private var startButtonTimer: Timer?
     private var distanceTimer: Timer?
-    private var preparationTime = 5
-    private var distanceTime = 3
 
     // MARK: - Count
     enum Count {
