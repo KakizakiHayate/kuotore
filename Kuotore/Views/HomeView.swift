@@ -83,11 +83,11 @@ struct HomeView: View {
                         
                         ScrollView {
                             LazyVGrid(columns: [
-                                GridItem(.fixed(proxy.size.width / 1.2 / 2)),
-                                GridItem(.fixed(proxy.size.width / 1.2 / 2))
+                                GridItem(.flexible()),
+                                GridItem(.flexible())
                             ], spacing: proxy.size.width / 24) {
                                 ForEach(homeVM.trainingInfos, id: \.self) { info in
-                                    NavigationLink(destination: EmptyView()) {
+                                    NavigationLink(destination: TrainingView(trainingInfo: info)) {
                                         VStack {
                                             HStack {
                                                 Image(systemName: "dumbbell.fill")

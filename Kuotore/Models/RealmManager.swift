@@ -43,4 +43,11 @@ enum RealmManager {
     static func getTrainingInfos() -> [TrainingInfo] {
         return Array(realm.objects(TrainingInfo.self))
     }
+    
+    // 初期設定完了
+    static func setExecutedStatus(training: TrainingInfo) {
+        try! realm.write {
+            training.isExecuted = true
+        }
+    }
 }
