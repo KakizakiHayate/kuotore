@@ -40,4 +40,25 @@ enum RealmManager {
     static func getTrainingInfos() -> [TrainingInfo] {
         return Array(realm.objects(TrainingInfo.self))
     }
+
+    ///  種目生成で追加する
+    static func addTrainingEvent(_ trainingName: String,
+                                 _ isRepetitive: Bool?,
+                                 _ distance: Int
+    ) async {
+        let trainingInfo = TrainingInfo()
+        trainingInfo.name = trainingName
+        trainingInfo.targetDistance = distance
+        if let isRepetitive {
+            trainingInfo.isRepetitive = isRepetitive // falseの場合のみ
+        }
+
+        do {
+            try realm.write {
+                realm.add(trainingInfo)
+            }
+        } catch {
+            Logger.standard.error("\(error)")
+        }
+    }
 }
