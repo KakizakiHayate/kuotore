@@ -21,7 +21,9 @@ struct AddTrainingEventView: View {
             // TODO: - Pickerで反復か持続選択させる？
 
             Button {
-                vm.startReserveCountdown(bluetoothManager)
+                Task {
+                    await vm.startReserveCountdown(bluetoothManager)
+                }
             } label: {
                 Text("スタート")
             }
