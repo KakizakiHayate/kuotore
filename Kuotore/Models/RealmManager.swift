@@ -19,15 +19,18 @@ enum RealmManager {
         // 腕立て伏せ
         let pushUp = TrainingInfo()
         pushUp.name = "腕立て伏せ"
+        pushUp.isDefault = true
         
         // スクアット
         let squat = TrainingInfo()
         squat.name = "スクアット"
+        squat.isDefault = true
         
         // プランク
         let plank = TrainingInfo()
         plank.name = "プランク"
         plank.isRepetitive = false
+        plank.isDefault = true
         
         try! realm.write {
             realm.add(pushUp)

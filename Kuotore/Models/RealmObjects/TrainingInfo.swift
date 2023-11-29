@@ -19,6 +19,9 @@ class TrainingInfo: Object {
     // 設定画面に飛ぶ
     @Persisted var targetDistance: Int = 0
     
+    // Defaultで生成される種目
+    @Persisted var isDefault = false
+    
     // TODO: - あとでまた追加
     // 反復する運動
     
