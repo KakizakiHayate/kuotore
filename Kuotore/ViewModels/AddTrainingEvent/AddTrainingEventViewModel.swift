@@ -34,9 +34,9 @@ class AddTrainingEventViewModel: ObservableObject {
 
 extension AddTrainingEventViewModel {
     // MARK: - Methods
-    /// 測定準備
     // TODO: - 後でメソッド名変更
-    func startReserveCountdown(_ bluetoothManager: CentralViewManager) {
+    /// 測定準備
+    func startReserveCountdown(_ bluetoothManager: CentralViewManager) async {
         self.startButtonTimer?.invalidate()
 
         self.startButtonTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
@@ -45,15 +45,17 @@ extension AddTrainingEventViewModel {
                 preparationTime -= 1 // 1秒ずつ減らしていく
             } else {
                 startButtonTimer?.invalidate()
-                self.finishDistanceMeasureCountDown(bluetoothManager)
+                Task {
+                    await self.finishDistanceMeasureCountDown(bluetoothManager)
+                }
                 self.preparationTime = Count.Time.preparationMaxTime.rawValue // 初期値に戻す
             }
         }
     }
 
-    /// 測定開始
     // TODO: - 後でメソッド名変更
-    func finishDistanceMeasureCountDown(_ bluetoothManager: CentralViewManager) {
+    /// 測定開始
+    func finishDistanceMeasureCountDown(_ bluetoothManager: CentralViewManager) async {
         self.distanceTimer?.invalidate()
 
         self.distanceTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
@@ -65,7 +67,22 @@ extension AddTrainingEventViewModel {
                 distanceTimer?.invalidate()
                 bluetoothManager.stopAction()
                 distanceTime = Count.Time.distanceMaxTime.rawValue // 初期値に戻す
+                Task {
+                    await self.averageDistance()
+                }
             }
         }
+    }
+
+    func averageDistance() async {
+        if distances.isEmpty { return }
+
+        let sum = distances.reduce(0, +)
+        let average = sum / distances.count
+
+        Logger.standard.notice("\(average)")
+
+        // 平均求めたらrealmに保存
+        await RealmManager.addTrainingEvent("種目テスト", nil, average)
     }
 }
