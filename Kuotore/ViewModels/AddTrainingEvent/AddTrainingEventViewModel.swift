@@ -75,10 +75,10 @@ extension AddTrainingEventViewModel {
     }
 
     func averageDistance() async {
-        if self.distances.isEmpty { return }
+        if distances.isEmpty { return }
 
         let sum = distances.reduce(0, +)
-        let average = sum / self.distances.count
+        let average = sum / distances.count
 
         Logger.standard.notice("\(average)")
 
