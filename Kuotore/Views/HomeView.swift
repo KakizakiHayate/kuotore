@@ -130,7 +130,7 @@ struct HomeView: View {
                                     }
                                 }
                                 
-                                NavigationLink(destination: EmptyView()) {
+                                NavigationLink(destination: AddTrainingView()) {
                                     VStack {
                                         HStack {
                                             Image(systemName: "plus")

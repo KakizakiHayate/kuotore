@@ -25,6 +25,8 @@
 		BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA612B13617A003E1A11 /* HomeView.swift */; };
 		BD4EDA642B13628E003E1A11 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA632B13628D003E1A11 /* RealmManager.swift */; };
 		BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */; };
+		BD8805B52B18A39D00B69A3B /* AddTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8805B42B18A39D00B69A3B /* AddTrainingView.swift */; };
+		BD8805B72B18AA5F00B69A3B /* SetTargetDistenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8805B62B18AA5F00B69A3B /* SetTargetDistenceView.swift */; };
 		BDC9A87D2B150A2500723B13 /* MPLUS1p-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8762B150A2500723B13 /* MPLUS1p-ExtraBold.ttf */; };
 		BDC9A87E2B150A2500723B13 /* MPLUS1p-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8772B150A2500723B13 /* MPLUS1p-Black.ttf */; };
 		BDC9A87F2B150A2500723B13 /* MPLUS1p-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDC9A8782B150A2500723B13 /* MPLUS1p-Light.ttf */; };
@@ -53,6 +55,8 @@
 		BD4EDA612B13617A003E1A11 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BD4EDA632B13628D003E1A11 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BD8805B42B18A39D00B69A3B /* AddTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingView.swift; sourceTree = "<group>"; };
+		BD8805B62B18AA5F00B69A3B /* SetTargetDistenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetDistenceView.swift; sourceTree = "<group>"; };
 		BDC9A8762B150A2500723B13 /* MPLUS1p-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BDC9A8772B150A2500723B13 /* MPLUS1p-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Black.ttf"; sourceTree = "<group>"; };
 		BDC9A8782B150A2500723B13 /* MPLUS1p-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUS1p-Light.ttf"; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				BD4EDA612B13617A003E1A11 /* HomeView.swift */,
 				BD3C18582B170B5C00A65302 /* TrainingView.swift */,
 				BD3C185A2B170BB500A65302 /* InitializeTrainingView.swift */,
+				BD8805B42B18A39D00B69A3B /* AddTrainingView.swift */,
+				BD8805B62B18AA5F00B69A3B /* SetTargetDistenceView.swift */,
 				75FC88192B139D27008CD47E /* AddTrainingEvent */,
 			);
 			path = Views;
@@ -297,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8805B72B18AA5F00B69A3B /* SetTargetDistenceView.swift in Sources */,
+				BD8805B52B18A39D00B69A3B /* AddTrainingView.swift in Sources */,
 				75FC88182B139D22008CD47E /* AddTrainingEventView.swift in Sources */,
 				BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */,
 				BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */,
