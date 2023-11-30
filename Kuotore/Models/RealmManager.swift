@@ -40,7 +40,12 @@ enum RealmManager {
     static func getTrainingInfos() -> [TrainingInfo] {
         return Array(realm.objects(TrainingInfo.self))
     }
+}
 
+extension RealmManager {
+    // MARK: - Methods
+
+    // MARK: - AddTrainingEvent
     ///  種目生成で追加する
     static func addTrainingEvent(_ trainingName: String,
                                  _ isRepetitive: Bool?,
@@ -60,5 +65,11 @@ enum RealmManager {
         } catch {
             Logger.standard.error("\(error)")
         }
+    }
+
+    // MARK: - Training
+    // 今までの種目の最高記録を返す
+    static func highestRecordTraining() async -> Int? {
+        return realm.objects(Training.self).max(of: \.repeatCount)
     }
 }
