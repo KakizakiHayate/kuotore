@@ -12,8 +12,12 @@ import RealmSwift
  */
 class Training: Object {
     @Persisted var trainingInfo: TrainingInfo?
+    /// 回数 or 持続時間
     @Persisted var repeatCount: Int = 0
+    /// 行った時間
     @Persisted var elapsedTime: Int = 0
+    /// 消費カロリー
     @Persisted var consumedCalorie: Float
+    // TODO: これ何に使うんだっけ？
     @Persisted var distances: RealmSwift.List<Int> = RealmSwift.List<Int>()
 }
