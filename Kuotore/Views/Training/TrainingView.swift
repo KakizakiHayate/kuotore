@@ -15,6 +15,7 @@ struct TrainingView: View {
     // MARK: - Body
     var body: some View {
         VStack {
+            Text("最高記録：\(vm.highestCount)")
             Text("回数: \(vm.trainingCount)")
                 .onChangeInteractivelyAvailable(bluetoothManager.distance) { _, newValue in
                     Task {
@@ -26,6 +27,8 @@ struct TrainingView: View {
             } label: {
                 Text("運動を終了する")
             }
+        }.task {
+            await vm.readHighestRecord()
         }
     } // body
 } // view
