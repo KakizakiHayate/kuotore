@@ -19,15 +19,18 @@ enum RealmManager {
         // 腕立て伏せ
         let pushUp = TrainingInfo()
         pushUp.name = "腕立て伏せ"
+        pushUp.isDefault = true
         
         // スクアット
         let squat = TrainingInfo()
         squat.name = "スクアット"
+        squat.isDefault = true
         
         // プランク
         let plank = TrainingInfo()
         plank.name = "プランク"
         plank.isRepetitive = false
+        plank.isDefault = true
         
         try! realm.write {
             realm.add(pushUp)
@@ -39,6 +42,13 @@ enum RealmManager {
     // 種目を全部読み込む
     static func getTrainingInfos() -> [TrainingInfo] {
         return Array(realm.objects(TrainingInfo.self))
+    }
+    
+    // 初期設定完了
+    static func setExecutedStatus(training: TrainingInfo) {
+        try! realm.write {
+            training.isExecuted = true
+        }
     }
 }
 

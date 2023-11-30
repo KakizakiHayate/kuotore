@@ -19,6 +19,13 @@ class TrainingInfo: Object {
     // 設定画面に飛ぶ
     @Persisted var targetDistance: Int = 0
     
+    // Defaultで生成される種目
+    @Persisted var isDefault = false
+    
+    // 1回以上実行したことがあるかを確認するフラグ
+    // TODO: - あとでfalseに帰る
+    @Persisted var isExecuted = true
+    
     // TODO: - あとでまた追加
     // 反復する運動
     

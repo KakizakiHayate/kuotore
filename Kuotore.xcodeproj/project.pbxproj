@@ -18,6 +18,8 @@
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
 		75FC88182B139D22008CD47E /* AddTrainingEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC88172B139D22008CD47E /* AddTrainingEventView.swift */; };
 		75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC881B2B139F20008CD47E /* AddTrainingEventViewModel.swift */; };
+		BD3C18592B170B5C00A65302 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C18582B170B5C00A65302 /* TrainingView.swift */; };
+		BD3C185B2B170BB500A65302 /* InitializeTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3C185A2B170BB500A65302 /* InitializeTrainingView.swift */; };
 		BD4EDA552B131CF2003E1A11 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA542B131CF2003E1A11 /* Realm */; };
 		BD4EDA572B131CF2003E1A11 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD4EDA562B131CF2003E1A11 /* RealmSwift */; };
 		BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EDA592B131DA1003E1A11 /* UserInfo.swift */; };
@@ -49,6 +51,8 @@
 		75F351432B04A933006EACD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75FC88172B139D22008CD47E /* AddTrainingEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingEventView.swift; sourceTree = "<group>"; };
 		75FC881B2B139F20008CD47E /* AddTrainingEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingEventViewModel.swift; sourceTree = "<group>"; };
+		BD3C18582B170B5C00A65302 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		BD3C185A2B170BB500A65302 /* InitializeTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeTrainingView.swift; sourceTree = "<group>"; };
 		BD4EDA592B131DA1003E1A11 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5B2B131E9F003E1A11 /* TrainingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingInfo.swift; sourceTree = "<group>"; };
 		BD4EDA5E2B132A64003E1A11 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				BD4EDA612B13617A003E1A11 /* HomeView.swift */,
+				BD3C18582B170B5C00A65302 /* TrainingView.swift */,
+				BD3C185A2B170BB500A65302 /* InitializeTrainingView.swift */,
 				75FC88192B139D27008CD47E /* AddTrainingEvent */,
 				75003C602B16E4590089D16A /* Training */,
 			);
@@ -330,6 +336,7 @@
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				BDC9A8892B150B2000723B13 /* Font+AppFonts.swift in Sources */,
 				755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */,
+				BD3C185B2B170BB500A65302 /* InitializeTrainingView.swift in Sources */,
 				75FC881C2B139F20008CD47E /* AddTrainingEventViewModel.swift in Sources */,
 				75003C5F2B16E44B0089D16A /* TrainingView.swift in Sources */,
 				755D302E2B0F8BC300EE834F /* CentralViewManager.swift in Sources */,
@@ -339,6 +346,7 @@
 				BD4EDA642B13628E003E1A11 /* RealmManager.swift in Sources */,
 				75003C5C2B16E29D0089D16A /* Logger.swift in Sources */,
 				BD4EDA5A2B131DA1003E1A11 /* UserInfo.swift in Sources */,
+				BD3C18592B170B5C00A65302 /* TrainingView.swift in Sources */,
 				75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
