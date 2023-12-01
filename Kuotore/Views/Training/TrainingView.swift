@@ -67,36 +67,8 @@ struct TrainingView: View {
 
                             Text("回")
                                 .font(.custom(Font.appBlack, size: proxy.size.width / 8))
-                        }
-                        .padding(.top)
-                        
-//                        HStack {
-////                            RoundedRectangle(cornerRadius: 12)
-////                                .frame(width: proxy.size.width / 2)
-////                                .frame(height: proxy.size.height / 48)
-////                                .offset(x: proxy.size.width / 12)
-////                                .
-////                                .rotationEffect(.degrees(-20))
-//                            Spacer()
-////                            Text("\(trainingInfo.name)の最高記録")
-//                            VStack(alignment: .trailing) {
-//                                Text("最高記録")
-//                                    .font(.custom(Font.appBold, size: proxy.size.width / 20))
-//                                    .padding(.trailing, proxy.size.width / 6)
-//                                Text("34回")
-//                                    .font(.custom(Font.appBold, size: proxy.size.width / 20))
-//                                    .padding(.trailing, proxy.size.width / 6)
-//                            }
-//                        }
-//                        
-//                        HStack {
-//                            Text("予想消費カロリー")
-//                            Spacer()
-//                            Text("46kcal")
-//                        }
-//                        .font(.custom(Font.appBold, size: proxy.size.width / 20))
-//                        .padding(.top)
-                        
+                        }.padding(.top)
+
                         HStack {
                             VStack {
                                 Text("予想消費カロリー")
