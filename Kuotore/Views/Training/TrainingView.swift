@@ -12,7 +12,7 @@ struct TrainingView: View {
     @StateObject private var bluetoothManager = CentralViewManager.shared
     @StateObject private var vm = TrainingViewModel()
     @State var flag = false
-    @State private var countdown: Int = 5
+    @State private var countdown: Int = 0
     // MARK: - Properties
     let trainingInfo: TrainingInfo
 
@@ -69,13 +69,67 @@ struct TrainingView: View {
                                 .font(.custom(Font.appBlack, size: proxy.size.width / 8))
                         }
                         .padding(.top)
+                        
+//                        HStack {
+////                            RoundedRectangle(cornerRadius: 12)
+////                                .frame(width: proxy.size.width / 2)
+////                                .frame(height: proxy.size.height / 48)
+////                                .offset(x: proxy.size.width / 12)
+////                                .
+////                                .rotationEffect(.degrees(-20))
+//                            Spacer()
+////                            Text("\(trainingInfo.name)の最高記録")
+//                            VStack(alignment: .trailing) {
+//                                Text("最高記録")
+//                                    .font(.custom(Font.appBold, size: proxy.size.width / 20))
+//                                    .padding(.trailing, proxy.size.width / 6)
+//                                Text("34回")
+//                                    .font(.custom(Font.appBold, size: proxy.size.width / 20))
+//                                    .padding(.trailing, proxy.size.width / 6)
+//                            }
+//                        }
+//                        
+//                        HStack {
+//                            Text("予想消費カロリー")
+//                            Spacer()
+//                            Text("46kcal")
+//                        }
+//                        .font(.custom(Font.appBold, size: proxy.size.width / 20))
+//                        .padding(.top)
+                        
                         HStack {
-                            Text("予想消費カロリー")
-                            Spacer()
-                            Text("46kcal")
+                            VStack {
+                                Text("予想消費カロリー")
+                                    .font(.custom(Font.appBold, size: proxy.size.width / 24))
+                                HStack(alignment: .bottom) {
+                                    Text("177")
+                                        .font(.custom(Font.appBlack, size: proxy.size.width / 16))
+                                    Text("kcal")
+                                        .font(.custom(Font.appBold, size: proxy.size.width / 24))
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical)
+                            .background(Color.appDarkGray)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            
+                            VStack {
+                                Text("最高記録")
+                                    .font(.custom(Font.appBold, size: proxy.size.width / 24))
+                                HStack(alignment: .bottom) {
+                                    Text("34")
+                                        .font(.custom(Font.appBlack, size: proxy.size.width / 16))
+                                    Text("回")
+                                        .font(.custom(Font.appBold, size: proxy.size.width / 24))
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical)
+                            .background(Color.appDarkGray)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
                         }
-                        .font(.custom(Font.appBold, size: proxy.size.width / 20))
-                        .padding(.top)
+//                        .padding(.top, proxy.size.height / 240)
+                        
                         ScrollView {
                             Button(action: {}, label: {
                                 Text("やり直す")
@@ -116,7 +170,7 @@ struct TrainingView: View {
                                     .foregroundStyle(.red)
                             }
                         }
-                        .padding(.top, proxy.size.height / 6)
+                        .padding(.top)
                         Spacer()
                     }
                 }
