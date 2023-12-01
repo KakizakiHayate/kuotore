@@ -47,7 +47,7 @@ struct HomeView: View {
                         .padding(.top)
                         
                         HStack {
-                            ForEach(eTrainingTimes, id: \.self) { time in
+                            ForEach(eTrainingTimes.indices, id: \.self) { index in
                                 Spacer()
                                 VStack {
                                     ZStack(alignment: .bottom) {
@@ -57,10 +57,10 @@ struct HomeView: View {
                                             .foregroundStyle(Color.appLightGray)
                                         RoundedRectangle(cornerRadius: 12)
                                             .frame(width: proxy.size.width / 32,
-                                                   height: (proxy.size.height / 8) * time / 12)
+                                                   height: (proxy.size.height / 8) * eTrainingTimes[index] / 12)
                                             .foregroundStyle(Color.appPrimary)
                                     }
-                                    Text("1日前")
+                                    Text("\(index + 1)日前")
                                         .font(.custom(Font.appMedium, size: proxy.size.width / 48))
                                 }
                                 Spacer()
