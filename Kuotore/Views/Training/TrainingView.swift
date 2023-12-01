@@ -88,9 +88,18 @@ struct TrainingView: View {
                             })
                             .padding(.top)
 
-                            Button {
-                                bluetoothManager.stopAction()
-                            } label: {
+//                            Button {
+//                                bluetoothManager.stopAction()
+//                            } label: {
+//                                Text("トレーニングを終わる")
+//                                    .font(.custom(Font.appBold, size: proxy.size.width / 24))
+//                                    .foregroundStyle(.black)
+//                                    .frame(maxWidth: .infinity)
+//                                    .padding(.vertical, proxy.size.height / 60)
+//                                    .background(Color.appPrimary)
+//                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+//                            }.padding(.vertical)
+                            NavigationLink(destination: TrainingResultView()) {
                                 Text("トレーニングを終わる")
                                     .font(.custom(Font.appBold, size: proxy.size.width / 24))
                                     .foregroundStyle(.black)
@@ -98,7 +107,8 @@ struct TrainingView: View {
                                     .padding(.vertical, proxy.size.height / 60)
                                     .background(Color.appPrimary)
                                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                            }.padding(.vertical)
+                            }
+                            .padding(.vertical)
                             
                             Button {} label: {
                                 Text("ホームに戻る")

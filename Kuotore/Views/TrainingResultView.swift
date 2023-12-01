@@ -21,14 +21,14 @@ struct LineData: Identifiable {
 
 struct TrainingResultView: View {
     let lineData: [LineData] = [
-            .init(week: "0.2", sales: 20, category: "ラーメン"),
-            .init(week: "0.4", sales: 10, category: "ラーメン"),
-            .init(week: "0.6", sales: 40, category: "ラーメン"),
-            .init(week: "0.8", sales: 60, category: "ラーメン"),
-            .init(week: "1.0", sales: 80, category: "ラーメン"),
-            .init(week: "1.2", sales: 90, category: "ラーメン"),
-            .init(week: "1.4", sales: 30, category: "ラーメン"),
-            .init(week: "1.6", sales: 20, category: "ラーメン")
+            .init(week: "1回目", sales: 20, category: "ラーメン"),
+            .init(week: "2回目", sales: 10, category: "ラーメン"),
+            .init(week: "3回目", sales: 40, category: "ラーメン"),
+            .init(week: "4回目", sales: 60, category: "ラーメン"),
+            .init(week: "5回目", sales: 80, category: "ラーメン"),
+            .init(week: "6回目", sales: 90, category: "ラーメン"),
+            .init(week: "7回目", sales: 30, category: "ラーメン"),
+            .init(week: "8回目", sales: 20, category: "ラーメン")
         ]
     
     var body: some View {
