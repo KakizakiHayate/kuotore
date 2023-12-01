@@ -133,6 +133,7 @@ struct TrainingResultView: View {
                 
             })
         }
+        .toolbar(.hidden)
     }
 }
 
