@@ -13,6 +13,7 @@ struct TrainingView: View {
     @StateObject private var vm = TrainingViewModel()
     @State var flag = false
     @State private var countdown: Int = 0
+    @Environment(\.dismiss) private var dismiss
     // MARK: - Properties
     let trainingInfo: TrainingInfo
 
@@ -74,7 +75,7 @@ struct TrainingView: View {
                                 Text("予想消費カロリー")
                                     .font(.custom(Font.appBold, size: proxy.size.width / 24))
                                 HStack(alignment: .bottom) {
-                                    Text("177")
+                                    Text("\(vm.calorie, specifier: "%.1f")")
                                         .font(.custom(Font.appBlack, size: proxy.size.width / 16))
                                     Text("kcal")
                                         .font(.custom(Font.appBold, size: proxy.size.width / 24))
@@ -103,7 +104,9 @@ struct TrainingView: View {
 //                        .padding(.top, proxy.size.height / 240)
                         
                         ScrollView {
-                            Button(action: {}, label: {
+                            Button {
+                                vm.trainingReset()
+                            } label: {
                                 Text("やり直す")
                                     .font(.custom(Font.appBold, size: proxy.size.width / 24))
                                     .foregroundStyle(.black)
@@ -111,7 +114,7 @@ struct TrainingView: View {
                                     .padding(.vertical, proxy.size.height / 60)
                                     .background(Color.appPrimary)
                                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                            })
+                            }
                             .padding(.top)
 
                             NavigationLink(destination: TrainingResultView()) {
@@ -125,7 +128,9 @@ struct TrainingView: View {
                             }
                             .padding(.vertical)
                             
-                            Button {} label: {
+                            Button {
+                                dismiss()
+                            } label: {
                                 Text("ホームに戻る")
                                     .font(.custom(Font.appBold, size: proxy.size.width / 24))
                                     .foregroundStyle(.white)
@@ -146,10 +151,13 @@ struct TrainingView: View {
                     }
                 }
                 .padding()
+                .onDisappear {
+                    bluetoothManager.stopAction()
+                }
             }
             .onAppear {
                 if !trainingInfo.isExecuted {
-                    flag.toggle()
+//                    flag.toggle()
                 } else {
                     let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                         if self.countdown > 0 {
