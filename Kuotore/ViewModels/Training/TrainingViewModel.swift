@@ -12,7 +12,8 @@ class TrainingViewModel: ObservableObject {
     // MARK: - Property Wrappers
     @ObservedObject private var bluetoothManager = CentralViewManager.shared
     @Published private(set) var trainingCount = 0
-    @Published private (set) var highestCount = 0
+    @Published private(set) var highestCount = 0
+    @Published private(set) var isCount = false
 
     // MARK: - Initialize
     init() {
@@ -26,8 +27,20 @@ extension TrainingViewModel {
     // MARK: - Methods
     func averageCount(_ distance: Int?) async {
         guard let distance else { return }
+        // Bluetooth通信で距離をたまに取得できないときがあり、０で返ってくるため０の場合は即終了
+        guard distance != 0 else { return }
         let average = 40
-        if distance <= average { trainingCount += 1 }
+        let countLine = average + 100
+        // カウントした後に、countLine以上高く上がらないとカウントしないようにする
+        if self.isCount {
+            guard distance > countLine else { return }
+            // カウントしてからカウントラインまで上がったことを示唆する
+            self.isCount = false
+        }
+        if distance <= average {
+            self.trainingCount += 1
+            self.isCount = true
+        }
     }
 
     @MainActor
