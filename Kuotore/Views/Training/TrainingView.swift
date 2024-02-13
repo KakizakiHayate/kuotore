@@ -157,7 +157,7 @@ struct TrainingView: View {
             }
             .onAppear {
                 if !trainingInfo.isExecuted {
-//                    flag.toggle()
+                    flag.toggle()
                 } else {
                     let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                         if self.countdown > 0 {
