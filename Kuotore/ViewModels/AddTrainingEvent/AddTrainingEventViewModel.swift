@@ -83,6 +83,6 @@ extension AddTrainingEventViewModel {
         Logger.standard.notice("\(average)")
 
         // 平均求めたらrealmに保存
-        await RealmManager.addTrainingEvent("種目テスト", nil, average)
+//        await RealmManager.addTrainingEvent("種目テスト", nil, average)
     }
 }

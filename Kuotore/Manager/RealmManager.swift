@@ -58,18 +58,21 @@ extension RealmManager {
     // MARK: - AddTrainingEvent
     ///  種目生成で追加する
     static func addTrainingEvent(_ trainingName: String,
-                                 _ isRepetitive: Bool?,
+                                 _ isRepetitive: Bool,
                                  _ distance: Int
     ) async {
         let trainingInfo = TrainingInfo()
         trainingInfo.name = trainingName
         trainingInfo.targetDistance = distance
-        if let isRepetitive {
+        if isRepetitive {
             trainingInfo.isRepetitive = isRepetitive // falseの場合のみ
+        } else {
+            // 何もしない
         }
 
         do {
             try realm.write {
+                print(trainingInfo)
                 realm.add(trainingInfo)
             }
         } catch {

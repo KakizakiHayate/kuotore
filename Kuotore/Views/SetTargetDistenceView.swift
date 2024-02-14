@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SetTargetDistenceView: View {
-    
-    @State var isSet = false
+    // MARK: - Properties
     @State var isSettingStart = false
-    
+    @Binding var name: String
+    @Binding var isRepetitive: Bool
     @Environment(\.dismiss) private var dismiss
-    
+    @StateObject private var bluetoothManager = CentralViewManager.shared
+    @StateObject private var vm = SetTargetDistenceViewModel()
+
     var body: some View {
         NavigationStack {
             GeometryReader { proxy in
@@ -34,19 +36,27 @@ struct SetTargetDistenceView: View {
                         .multilineTextAlignment(.center)
                     
                     Group {
-                        if isSet && isSettingStart {
+                        if vm.isSet && isSettingStart {
                             Text("測定完了")
-                        } else if !isSet && isSettingStart {
+                                .task {
+                                    await vm.addTrainingData(
+                                        name: name,
+                                        isRepetitive: isRepetitive,
+                                        average: vm.average ?? 0
+                                    )
+                                }
+                        } else if !vm.isSet && isSettingStart {
                             Text("測定中")
                         }
                     }
                     .font(.custom(Font.appBlack, size: proxy.size.width / 12))
                     .padding(.top, proxy.size.height / 8)
                     
-                    if isSet {
-                        Button(action: {
-                            dismiss()
-                        }, label: {
+                    if vm.isSet {
+                        NavigationLink {
+                            HomeView()
+                                .navigationBarBackButtonHidden(true)
+                        } label: {
                             Text("登録")
                                 .font(.custom(Font.appMedium, size: proxy.size.width / 24))
                                 .frame(maxWidth: .infinity)
@@ -54,17 +64,19 @@ struct SetTargetDistenceView: View {
                                 .background(.appPrimary)
                                 .foregroundStyle(.black)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                        })
+                        }
                         .padding(.top, proxy.size.height / 8)
-                    } else if !isSet && !isSettingStart {
-                        Button(action: {
+                    } else if !vm.isSet && !isSettingStart {
+                        Button {
                             withAnimation {
                                 isSettingStart = true
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                isSet = true
+//                                isSet = true
                             }
-                        }, label: {
+                            bluetoothManager.startAction()
+                            // この後に平均を求める
+                        } label: {
                             Text("測定開始")
                                 .font(.custom(Font.appMedium, size: proxy.size.width / 24))
                                 .frame(maxWidth: .infinity)
@@ -72,17 +84,14 @@ struct SetTargetDistenceView: View {
                                 .background(.appPrimary)
                                 .foregroundStyle(.black)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                        })
+                        }
                         .padding(.top, proxy.size.height / 8)
                     } else {
-                        Button(action: {
+                        Button {
                             withAnimation {
                                 isSettingStart = true
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                isSet = true
-                            }
-                        }, label: {
+                        } label: {
                             Text("距離を測っています...")
                                 .font(.custom(Font.appMedium, size: proxy.size.width / 24))
                                 .frame(maxWidth: .infinity)
@@ -90,17 +99,25 @@ struct SetTargetDistenceView: View {
                                 .background(.appDarkGray)
                                 .foregroundStyle(.white)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                        })
+                                .onChangeInteractivelyAvailable(bluetoothManager.distance ?? 0) { _, newValue in
+                                    Task {
+                                        await vm.averageDistance(newValue)
+                                    }
+                                }
+                        }
                         .padding(.top, proxy.size.height / 8)
                     }
                 }
                 .padding()
                 .toolbar(.hidden)
+                .onDisappear {
+                    bluetoothManager.stopAction()
+                }
             }
         }
     }
 }
 
 #Preview {
-    SetTargetDistenceView()
+    SetTargetDistenceView(name: .constant(""), isRepetitive: .constant(false))
 }

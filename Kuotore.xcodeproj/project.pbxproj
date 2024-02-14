@@ -13,6 +13,7 @@
 		755D30322B0F8E3A00EE834F /* TransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D30312B0F8E3A00EE834F /* TransferService.swift */; };
 		757F67FA2B19830F00489343 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757F67F92B19830F00489343 /* Migration.swift */; };
 		7590D3FC2B162EF200328956 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590D3FB2B162EF200328956 /* Extension+View.swift */; };
+		75A062D92B7C53810011AE95 /* SetTargetDistenceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A062D82B7C53810011AE95 /* SetTargetDistenceViewModel.swift */; };
 		75F3513D2B04A930006EACD5 /* KuotoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3513C2B04A930006EACD5 /* KuotoreApp.swift */; };
 		75F351412B04A933006EACD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351402B04A933006EACD5 /* Assets.xcassets */; };
 		75F351442B04A933006EACD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F351432B04A933006EACD5 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		755D30312B0F8E3A00EE834F /* TransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferService.swift; sourceTree = "<group>"; };
 		757F67F92B19830F00489343 /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
 		7590D3FB2B162EF200328956 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		75A062D82B7C53810011AE95 /* SetTargetDistenceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetDistenceViewModel.swift; sourceTree = "<group>"; };
 		75F351392B04A930006EACD5 /* Kuotore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuotore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F3513C2B04A930006EACD5 /* KuotoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuotoreApp.swift; sourceTree = "<group>"; };
 		75F351402B04A933006EACD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		75A062D72B7C53590011AE95 /* AddTraining */ = {
+			isa = PBXGroup;
+			children = (
+				75A062D82B7C53810011AE95 /* SetTargetDistenceViewModel.swift */,
+			);
+			path = AddTraining;
+			sourceTree = "<group>";
+		};
 		75F351302B04A930006EACD5 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		BD4EDA652B1367E8003E1A11 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				75A062D72B7C53590011AE95 /* AddTraining */,
 				BD4EDA662B13683D003E1A11 /* HomeViewModel.swift */,
 				75FC881A2B139F03008CD47E /* AddTrainingEvent */,
 				75003C612B16E52D0089D16A /* Training */,
@@ -361,6 +372,7 @@
 				BD8805B52B18A39D00B69A3B /* AddTrainingView.swift in Sources */,
 				75FC88182B139D22008CD47E /* AddTrainingEventView.swift in Sources */,
 				BD4EDA622B13617A003E1A11 /* HomeView.swift in Sources */,
+				75A062D92B7C53810011AE95 /* SetTargetDistenceViewModel.swift in Sources */,
 				BD4EDA672B13683D003E1A11 /* HomeViewModel.swift in Sources */,
 				BD4EDA5C2B131E9F003E1A11 /* TrainingInfo.swift in Sources */,
 				BDC9A8892B150B2000723B13 /* Font+AppFonts.swift in Sources */,

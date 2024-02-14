@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/// 新しい種目を追加する画面
 struct AddTrainingView: View {
     
     @State var name = ""
@@ -55,13 +55,13 @@ struct AddTrainingView: View {
                             Spacer()
                         }
                         HStack {
-                            Button(action: {
+                            Button {
                                 isRepetitive = true
-                            }, label: {
+                            } label: {
                                 Text("反復")
                                     .padding(.vertical, proxy.size.height / 80)
                                     .frame(maxWidth: .infinity)
-                            })
+                            }
                             .background(.appLightGray)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
                             .overlay {
@@ -90,7 +90,7 @@ struct AddTrainingView: View {
                     }
                     .padding(.top)
                     
-                    NavigationLink(destination: SetTargetDistenceView()) {
+                    NavigationLink(destination: SetTargetDistenceView(name: $name, isRepetitive: $isRepetitive)) {
                         Text("次へ")
                             .font(.custom(Font.appMedium, size: proxy.size.width / 24))
                             .frame(maxWidth: .infinity)
