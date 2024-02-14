@@ -13,6 +13,7 @@ class TrainingViewModel: ObservableObject {
     @ObservedObject private var bluetoothManager = CentralViewManager.shared
     @Published private(set) var trainingCount = 0
     @Published private(set) var highestCount = 0
+    @Published private(set) var calorie = Double(0)
     @Published private(set) var isCount = false
 
     // MARK: - Initialize
@@ -39,6 +40,7 @@ extension TrainingViewModel {
         }
         if distance <= average {
             self.trainingCount += 1
+            self.calorie += 0.8
             self.isCount = true
         }
     }
@@ -50,5 +52,10 @@ extension TrainingViewModel {
         }
         print(highestCount)
         self.highestCount = highestCount
+    }
+
+    func trainingReset() {
+        self.calorie = Double(0)
+        self.trainingCount = 0
     }
 }

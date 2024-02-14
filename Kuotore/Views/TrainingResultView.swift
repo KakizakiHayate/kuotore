@@ -116,7 +116,10 @@ struct TrainingResultView: View {
                         .font(.custom(Font.appMedium, size: proxy.size.width / 32))
                     }
                     
-                    NavigationLink(destination: SetTargetDistenceView()) {
+                    NavigationLink(
+                        destination: HomeView()
+                            .navigationBarBackButtonHidden(true)
+                    ) {
                         Text("ホームに戻る")
                             .font(.custom(Font.appMedium, size: proxy.size.width / 24))
                             .frame(maxWidth: .infinity)
