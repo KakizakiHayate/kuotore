@@ -15,12 +15,15 @@ class TrainingViewModel: ObservableObject {
     @Published private(set) var highestCount = 0
     @Published private(set) var calorie = Double(0)
     @Published private(set) var isCount = false
+    @Published var trainingInfos: [TrainingInfo] = []
+    let average: Int
 
     // MARK: - Initialize
-    init() {
+    init(average: Int) {
         // 前回の最高記録を表示
         // bluetoothを開始
-        bluetoothManager.startAction()   
+        trainingInfos = RealmManager.getTrainingInfos()
+        self.average = average
     }
 }
 
@@ -30,8 +33,8 @@ extension TrainingViewModel {
         guard let distance else { return }
         // Bluetooth通信で距離をたまに取得できないときがあり、０で返ってくるため０の場合は即終了
         guard distance != 0 else { return }
-        let average = 40
-        let countLine = average + 100
+        print("averagegege\(self.average)")
+        let countLine = self.average + 50
         // カウントした後に、countLine以上高く上がらないとカウントしないようにする
         if self.isCount {
             guard distance > countLine else { return }
